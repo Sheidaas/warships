@@ -70,6 +70,19 @@ class Board:
     def render(self, mouse_position):
         self.screen.screen.blit(self.render_objects['background']['render'],
                            self.render_objects['background']['position'])
+        position = (self.start[0] + (800 * self.screen.engine.settings.graphic['screen']['resolution_scale'][0]),
+                    self.start[1],
+                    525 * self.screen.engine.settings.graphic['screen']['resolution_scale'][1],
+                    225 * self.screen.engine.settings.graphic['screen']['resolution_scale'][1])
+        pygame.draw.rect(self.screen.screen, (100, 100, 100), position)
+
+        position = (position[0] + (50 * self.screen.engine.settings.graphic['screen']['resolution_scale'][0]), position[1])
+        for key in self.screen.engine.database.language.texts['gui']['board'].keys():
+            position = (position[0], position[1] + (50 * self.screen.engine.settings.graphic['screen']['resolution_scale'][1]))
+            text_to_render = self.screen.font.render(self.screen.engine.database.language.texts['gui']['board'][key],
+                                                     int(self.screen.engine.settings.graphic['screen']['antialias']), (255, 255, 255))
+            self.screen.screen.blit(text_to_render, position)
+
 
         for x in range(10):
             position = [self.start[0] + x * self.render_objects['square']['square']['size'][0] - 200, self.start[1]]

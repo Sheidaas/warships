@@ -27,6 +27,11 @@
   "end_game": {
     "winner": "Zwycięża player: ",
     "score": "Wynik: "
+  },
+  "board": {
+    "rotate_q": "Użyj klawisza Q aby obrócić statek w prawo",
+    "rotate_e": "Użyj klawisza E aby obrócić statek w lewo",
+    "toggle": "Użyj klawisza X aby zmienić aktywną mapę"
   }
 
 }

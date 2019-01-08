@@ -26,6 +26,11 @@
   "end_game": {
     "winner": "Won player: ",
     "score": "Score: "
+  },
+    "board": {
+    "rotate_q": "Use Q to rotate ship in right",
+    "rotate_e": "Use E to rotate ship in left",
+    "toggle": "Use Q to toggle map"
   }
 
 }

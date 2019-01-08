@@ -14,9 +14,9 @@ class ShootingPhase:
             return True
         return False
 
-    def shoot(self, board, localization):
+    def shoot(self, board, localization, ai=None):
         board.render_objects['boards'][board.active_player]['shoots'].append(localization)
-        if not self.if_hit(board, localization):
+        if not self.if_hit(board, localization, ai):
             board.toggle_player()
             board.mixer.play_song('miss')
             if board.active_player == 1:
@@ -24,7 +24,7 @@ class ShootingPhase:
             else:
                 board.active_board = 1
 
-    def if_hit(self, board, localization):
+    def if_hit(self, board, localization, ai=None):
         player = 1
         if board.active_player == 1:
             player = 2
@@ -33,10 +33,19 @@ class ShootingPhase:
                 if localization == part['position']:
                     if self.is_destroyed(board, ship):
                         ship.destroyed = True
+                        if not ai == None:
+                            ai.attacking_ship['destroyed'] = True
+                            ai.attacking_ship['hit'] = False
                         board.mixer.play_song('destroy')
                     else:
+                        if not ai == None:
+                            ai.attacking_ship['hit'] = True
+                            ai.attacking_ship['destroyed'] = False
                         board.mixer.play_song('hit')
                     return True
+        if not ai == None:
+            ai.attacking_ship['hit'] = False
+            ai.attacking_ship['destroyed'] = False
         return False
 
     def is_destroyed(self, board, ship):
