@@ -1,0 +1,32 @@
+{
+  "menu": {
+    "new_game": "Nowa gra",
+    "load_game": "Wczytaj gre",
+    "score_board": "Tablica wyników",
+    "settings": "Ustawienia",
+    "exit": "Wyjdź z gry"
+  },
+  "settings": {
+    "resume": "Powrót",
+    "antialias": "Antialias: ",
+    "fullscreen": "Pełny ekran: ",
+    "font_size": "Rozmiar czcionki: ",
+    "resolution": "Rozdzielczość: "
+  },
+  "new_game": {
+    "new_game_human": "Nowa gra przeciwko człowiekowi",
+    "new_game_ai": "Nowa gra przeciwko komputerowi",
+    "ships": {
+      "1": "Jednomasztowiec",
+      "2": "Dwumasztowiec",
+      "3": "Trójmasztowiec",
+      "4": "Czteromasztowiec"
+    },
+    "return": "Powrót"
+  },
+  "end_game": {
+    "winner": "Zwycięża player: ",
+    "score": "Wynik: "
+  }
+
+}

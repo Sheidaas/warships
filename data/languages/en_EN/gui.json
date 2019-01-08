@@ -1,0 +1,31 @@
+{
+  "menu": {
+    "new_game": "New Game",
+    "score_board": "Scoreboard",
+    "settings": "Settings",
+    "exit": "Exit"
+  },
+  "settings": {
+    "resume": "Resume",
+    "antialias": "Antialias: ",
+    "fullscreen": "Fullscreen: ",
+    "font_size": "Font size: ",
+    "resolution": "Resolution: "
+  },
+  "new_game": {
+    "new_game_human": "New game against human",
+    "new_game_ai": "New game against AI",
+    "ships": {
+      "1": "One-piece ship",
+      "2": "Two-piece ship",
+      "3": "Three-piece ship",
+      "4": "Four-piece ship"
+    },
+    "return": "Resume"
+  },
+  "end_game": {
+    "winner": "Won player: ",
+    "score": "Score: "
+  }
+
+}
